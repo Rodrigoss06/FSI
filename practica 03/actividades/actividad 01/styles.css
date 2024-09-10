@@ -1,0 +1,211 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: Arial, 'Times New Roman', Times, serif;
+    background-color: black;
+    background-image: url("/public/pattern.svg");
+    background-position-y: top;
+    background-position-x: 40%;
+    background-repeat: no-repeat;
+    background-blend-mode: difference;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: clamp(20px, 5vw, 40px); /* Tamaño de fuente dinámico según el ancho del viewport */
+    display: flex;
+    justify-content: center;
+}
+
+.headTable {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr)) 1fr;
+    width: clamp(560px, 70vw, 70vw);
+    gap: 20px;
+    border-radius: 12px;
+    border: 2px solid #fff;
+}
+
+.headTableElement {
+    display: inline-flex;
+    place-content: center;
+    font-size: clamp(16px, 2vw, 22px); /* Tamaño dinámico de fuente */
+    font-weight: 600;
+}
+
+.bodyTable {
+    width: clamp(560px, 70vw, 70vw);
+    gap: 20px;
+    border-radius: 10px;
+    margin: 16px;
+}
+
+.bodyTableElement {
+    display: inline-flex;
+    place-content: center;
+    font-size: clamp(14px, 1.8vw, 18px); /* Tamaño dinámico de fuente */
+}
+
+.rowTable {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr)) 1fr;
+    width: clamp(560px, 70vw, 70vw);
+    gap: 20px;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+.rowTable:first-child {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-left-radius: 0.375rem;
+    border-top-right-radius: 0.375rem;
+}
+
+.rowTable:last-child {
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+
+.buttonDelete {
+    border-radius: 8px;
+    background-color: red;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.buttonDelete svg {
+    margin-bottom: 3px;
+}
+
+.buttonDelete:hover {
+    background-color: red;
+    opacity: .7;
+}
+
+.buttonEdit {
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.buttonEdit svg {
+    margin-bottom: 5px;
+}
+/* #endregion */
+/* styles.css */
+
+/* Estilo para el título del formulario */
+.mainModal{
+    border-radius: 12px;
+}
+.form-title {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    align-self: center;
+    border-radius: 12px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Estilo general del formulario */
+.edit-form {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las etiquetas */
+.form-label {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Estilo para los inputs */
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo específico para el textarea */
+.form-textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Estilo para el botón de guardar */
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
