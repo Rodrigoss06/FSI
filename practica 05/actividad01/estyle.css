@@ -1,0 +1,86 @@
+/* Estilo general */
+html {
+    font-size: 16px; /* Tamaño base, 1rem = 16px */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #0f0f0f, #1e1e1e); /* Fondo oscuro */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Contenedor de la calculadora */
+.calculadora-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Caja de la calculadora */
+.calculadora {
+    background-color: #222; /* Fondo más oscuro para la calculadora */
+    padding: 2rem; /* Rem aplicado a padding */
+    border-radius: 1rem;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 40%; /* El ancho es porcentual, no se basa en rem */
+}
+
+h1 {
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem; /* Escala con respecto al tamaño base */
+    color: #fff; /* Cambiar el color del título */
+}
+
+/* Estilos de las entradas */
+.texto {
+    width: calc(100% - 1.25rem);
+    padding: 1rem;
+    margin: 0.625rem 0;
+    font-size: 1rem; /* Rem en función del tamaño base */
+    border-radius: 0.625rem;
+    border: 2px solid #444; /* Borde más definido */
+    outline: none;
+    background-color: #333; /* Fondo más oscuro para los inputs */
+    color: #fff;
+}
+
+/* Botones */
+.botones {
+    display: flex;  /* Cambiar a flex */
+    justify-content: space-around;  /* Espacio entre los botones */
+    gap: 0.625rem;  /* Separación entre botones */
+    margin-top: 1rem;
+}
+
+button {
+    flex: 1; /* Todos los botones ocupan el mismo espacio */
+    padding: 0.75rem 1.25rem;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 0.625rem;
+    color: white;
+    font-size: 1rem; /* Rem aplicado a los botones */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación al hover */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #16a085;
+    transform: scale(1.05); /* Levemente más grande al hacer hover */
+}
+
+/* Estilo de la respuesta */
+.respuesta {
+    margin-top: 1.25rem;
+    font-size: 1.25rem; /* Tamaño relativo para la respuesta */
+    font-weight: bold;
+    color: #f39c12;
+    min-height: 3rem;
+}
